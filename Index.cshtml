@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Root Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">The Root Calculator; Determine the value with the highest root value</h1>
+
+    <div>
+     @{
+         @if(ViewBag.Result != null){
+             <h5 class="display-8 text-danger"> <em>@ViewBag.Result</em> </h5>
+         }
+     }
+
+     <form asp-controller="Home" asp-action="Squareroot" method="POST">
+         <input type="number" placeholder="FirstNumber" name="firstNumber" />
+         <input type="number" placeholder="SecondNumber" name="secondNumber" /> 
+         <button type="submit">Submit</button> 
+    </form>
+
+</div>
+
+</div>
